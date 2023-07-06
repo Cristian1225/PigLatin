@@ -5,9 +5,11 @@
   <script>
     function translateToPigLatin() {
       const inputText = document.getElementById('inputText').value;
-      // Rest of the translation logic goes here...
-      // You can use the translateToPigLatin function from the previous examples
-      translateToPigLatin(inputText);
+     
+      const translatedText = translateToPigLatin(inputText);
+
+      // Displays the translated text on the page
+      document.getElementById('outputText').innerHTML = translatedText;
     }
   </script>
 </head>
@@ -16,5 +18,6 @@
   <label for="inputText">Enter a phrase:</label>
   <input type="text" id="inputText">
   <button onclick="translateToPigLatin()">Translate</button>
+  <div id="outputText"></div>
 </body>
 </html>
